@@ -27,8 +27,11 @@ const Todo = (props) => {
         <li className={`todo-item ${finish ? "completed" : ""}`}>
           {props.todo.name}
         </li>
-        <li>{finish ? " Done " : " Not Done "}</li>
-        <li>{props.todo.priority}</li>
+        <li>{finish ? " :Done " : ":Not Done "}</li>
+        <li>
+          {" - "}
+          {props.todo.priority}
+        </li>
         <button
           onClick={handleFinish}
           type="button"
